@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "horary-bot"
+version = "0.1.0"
+description = "A horary astrology chatbot built on real ephemeris data"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyswisseph",
+    "fastapi",
+    "uvicorn",
+    "pyyaml",
+    "timezonefinder",
+    "tzdata",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,16 @@
+# Virtual environment
+.venv/
+
+# Python clutter
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Secrets (e.g. API keys for the LLM layer later)
+.env
